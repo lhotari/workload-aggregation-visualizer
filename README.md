@@ -1,10 +1,14 @@
 # Effects of workload aggregation on system load
 
-A visualization tool demonstrating the effects of workload aggregation on system load, inspired by Andrew Warfield's talk at FAST '23: ["Building and Operating a Pretty Big Storage System (My Adventures in Amazon S3)"](https://www.youtube.com/watch?v=sc3J4McebHE&t=1333s).
-
 ## Overview
 
-This tool provides an interactive visualization of how aggregating multiple decorrelated workloads can reduce the net peak load on a system, leading to more efficient resource utilization. It demonstrates a key principle behind large-scale distributed systems like Amazon S3.
+* Multi-tenancy significantly reduces the peak-to-average ratio of overall system load
+  * In general, systems must provision for peak demand, not average load
+  * Lower peak-to-average ratios directly translate to fewer overprovisioned resources
+  * This results in improved resource utilization and cost efficiency
+
+This simulation is inspired by Andrew Warfield's talk at FAST '23: ["Building and Operating a Pretty Big Storage System (My Adventures in Amazon S3)"](https://www.youtube.com/watch?v=sc3J4McebHE&t=1333s).
+It a key principle behind large-scale distributed systems like Amazon S3.
 
 Please note that this script contains a lot of assumptions about the simulated workloads and doesn't necessarily match reality. The goal has been to visualize the effects of workload aggregation on system load.
 
