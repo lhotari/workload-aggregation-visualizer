@@ -1,18 +1,19 @@
-# Effects of workload aggregation on system load
+# Multi-Tenant Workload Aggregation: Interactive Simulation & Visualization Tool
 
 ## Overview
 
+This simulation and visualization is inspired by Andrew Warfield's talk at FAST '23: ["Building and Operating a Pretty Big Storage System (My Adventures in Amazon S3)"](https://www.youtube.com/watch?v=sc3J4McebHE&t=1333s).
+
+This simulation was created to provide visualization of workload aggregation for a guest lecture in the Aalto University course "Networking at Scale and Advanced Applications" on March 18, 2025, covering [Autoscaling challenges of multitenant SaaS platforms](presentation/Autoscaling%20challenges%20of%20multitenant%20SaaS%20platforms.pdf). You can find the slides [here](presentation/Autoscaling%20challenges%20of%20multitenant%20SaaS%20platforms.pdf).
+
 * Multi-tenancy significantly reduces the peak-to-average ratio of overall system load
-  * In general, systems must provision for peak demand, not average load
+  * In general, systems must provision for peak demand, not average load to meet performance quality requirements
   * Lower peak-to-average ratios directly translate to fewer overprovisioned resources
   * This results in improved resource utilization and cost efficiency
 
-This simulation is inspired by Andrew Warfield's talk at FAST '23: ["Building and Operating a Pretty Big Storage System (My Adventures in Amazon S3)"](https://www.youtube.com/watch?v=sc3J4McebHE&t=1333s).
-It a key principle behind large-scale distributed systems like Amazon S3.
+Please note that this script contains many assumptions about the simulated workloads and doesn't necessarily match reality. The goal is to visualize the effects of workload aggregation on system load. The [presentation](presentation/Autoscaling%20challenges%20of%20multitenant%20SaaS%20platforms.pdf) contains more details about cases where workloads are correlated and don't follow the model used in this simulation.
 
-Please note that this script contains a lot of assumptions about the simulated workloads and doesn't necessarily match reality. The goal has been to visualize the effects of workload aggregation on system load.
-
-## Features
+## Features of the simulation
 
 - **Interactive Visualization:** Dynamically adjust the number of aggregated workloads (k × k grid)
   - **Keyboard Controls:**
@@ -54,27 +55,37 @@ Images were generated with this command:
 ```shell
 ./workload-aggregation-visualizer.py --output-dir examples --format svg --plot-overprovisioning --batch
 ```
-
+_(Some images are omitted to simplify the example.)_
 ![workload 1x1 - single workload visualization](examples/aggregated_workloads_1x1.svg)
-![workload 2x2 - aggregation of 4 workloads](examples/aggregated_workloads_2x2.svg)
-![workload 3x3 - aggregation of 9 workloads](examples/aggregated_workloads_3x3.svg)
-![workload 4x4 - aggregation of 16 workloads](examples/aggregated_workloads_4x4.svg)
 ![workload 5x5 - aggregation of 25 workloads](examples/aggregated_workloads_5x5.svg)
-![workload 6x6 - aggregation of 36 workloads](examples/aggregated_workloads_6x6.svg)
 ![workload 7x7 - aggregation of 49 workloads](examples/aggregated_workloads_7x7.svg)
-![workload 8x8 - aggregation of 64 workloads](examples/aggregated_workloads_8x8.svg)
-![workload 9x9 - aggregation of 81 workloads](examples/aggregated_workloads_9x9.svg)
 ![workload 10x10 - aggregation of 100 workloads](examples/aggregated_workloads_10x10.svg)
 ![Graph showing how overprovisioning factor decreases as k increases from 1 to 10](examples/overprovisioning_factor_k1-10.svg)
 
-## Resources related to economics of scale in cloud services
+## Presentation that includes this visualization
 
-These aren't necessary directly related to the visualization in this project. These resources were the inspiration to create this visualization.
+* Guest lecture for Aalto University course “Networking at Scale and Advanced Applications” on March 18, 2025 about [Autoscaling challenges of multitenant SaaS platforms](presentation/Autoscaling%20challenges%20of%20multitenant%20SaaS%20platforms.pdf) by Lari Hotari
 
-- [Andy Warfield: Building and Operating a Pretty Big Storage System (My Adventures in Amazon S3), part "Individual workloads are bursty", presentation at FAST'23](https://www.youtube.com/watch?v=sc3J4McebHE&t=1333s)
-- [Marc Brooker: Surprising Scalability of Multitenancy, blog post 2023-03-23](https://brooker.co.za/blog/2023/03/23/economics.html)
-- [Marc Brooker: Surprising Economics of Load-Balanced Systems, blog post 2020-08-06](https://brooker.co.za/blog/2020/08/06/erlang.html)
-- [Jack Vanlightly: On the future of cloud services and BYOC, blog post 2023-09-25](https://jack-vanlightly.com/blog/2023/9/25/on-the-future-of-cloud-services-and-byoc)
+## Resources related to multi-tenant SaaS and economics of scale in cloud services
+
+These aren't necessarily directly related to the visualization in this project. These resources were the inspiration to create this visualization as well as some of the resources for the [related presentation](presentation/Autoscaling%20challenges%20of%20multitenant%20SaaS%20platforms.pdf).
+
+* [Andy Warfield: Building and Operating a Pretty Big Storage System (My Adventures in Amazon S3), part "Individual workloads are bursty", presentation at FAST'23](https://www.youtube.com/watch?v=sc3J4McebHE&t=1333s)
+* [Marc Brooker: Surprising Scalability of Multitenancy, blog post 2023-03-23](https://brooker.co.za/blog/2023/03/23/economics.html)
+* [Marc Brooker: Surprising Economics of Load-Balanced Systems, blog post 2020-08-06](https://brooker.co.za/blog/2020/08/06/erlang.html)
+* [Jack Vanlightly: On the future of cloud services and BYOC, blog post 2023-09-25](https://jack-vanlightly.com/blog/2023/9/25/on-the-future-of-cloud-services-and-byoc)
+* Elhemali\, M\.\, Gallagher\, N\.\, Gordon\, N\.\, Idziorek\, J\.\, Krog\, R\.\, Lazier\, C\.\, Mo\, E\.\, Mritunjai\, A\.\, Perianayagam\, S\.\, Rath\, T\.\, Sivasubramanian\, S\.\, Sorenson III\, J\.C\.\, Sosothikul\, S\.\, Terry\, D\.\, & Vig\, A\. \(2022\)\. __Amazon DynamoDB: A scalable\, predictably performant\, and fully managed NoSQL database service\.__ Retrieved from _https://www\.amazon\.science/publications/amazon\-dynamodb\-a\-scalable\-predictably\-performant\-and\-fully\-managed\-nosql\-database\-service_
+  * _[Conference presentation on YouTube](https://www.youtube.com/watch?v=9AkgiEJ_dA4)_
+* Ed Huang’s blog post series about TiDB's resource control framework
+  * _[The Road To Serverless: Intro & Why](https://me.0xffff.me/dbaas1.html)_
+  * _[The Road To Serverless: Storage Engine](https://me.0xffff.me/dbaas2.html)_
+  * _[The Road To Serverless: Multi\-tenanc](https://me.0xffff.me/dbaas3.html)_  _[y](https://me.0xffff.me/dbaas3.html)_
+* Jack Vanlightly’s blog post series
+  * _[The Architecture of Serverless Data Systems](https://jack-vanlightly.com/blog/2023/11/14/the-architecture-of-serverless-data-systems)_
+* Povzner\, A\.\, Mahajan\, P\.\, Gustafson\, J\.\, Rao\, J\.\, Juma\, I\.\, Min\, F\.\, Sridharan\, S\.\, Bhatia\, N\.\, Attaluri\, G\.\, Chandra\, A\.\, Kozlovski\, S\.\, Sivaram\, R\.\, Bradstreet\, L\.\, Barrett\, B\.\, Shah\, D\.\, Jacot\, D\.\, Arthur\, D\.\, Dagostino\, R\.\, McCabe\, C\.\, Obili\, M\. R\.\, Prakasam\, K\.\, Sancio\, J\. G\.\, Singh\, V\.\, Nikhil\, A\.\, & Gupta\, K\. \(2023\)\.  __Kora: A Cloud\-Native Event Streaming Platform for Kafka\.__  Proceedings of the VLDB Endowment\, 16\(12\)\, 3822\-3834\.  _[https://doi\.org/10\.14778/3611540\.3611567](https://doi.org/10.14778/3611540.3611567)_
+* AWS blog posts by David Yanacek
+  * _[Fairness in multi\-tenant systems](https://aws.amazon.com/builders-library/fairness-in-multi-tenant-systems/)_
+  * _[Using load shedding to avoid overload](https://aws.amazon.com/builders-library/using-load-shedding-to-avoid-overload/)_
 
 ## License
 
