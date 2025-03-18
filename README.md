@@ -68,11 +68,12 @@ _(Some images are omitted to simplify the example.)_
 
 ## Resources related to multi-tenant SaaS and economics of scale in cloud services
 
-These aren't necessarily directly related to the visualization in this project. These resources were the inspiration to create this visualization as well as some of the resources for the [related presentation](https://lhotari.github.io/workload-aggregation-visualizer/presentation/Autoscaling%20challenges%20of%20multitenant%20SaaS%20platforms.pdf).
+These resources aren't necessarily directly related to the visualization in this project. They were the inspiration to create this visualization as well as some of the resources for the [related presentation](https://lhotari.github.io/workload-aggregation-visualizer/presentation/Autoscaling%20challenges%20of%20multitenant%20SaaS%20platforms.pdf). Some resources are not directly related to multi-tenancy, but instead focus on reliability patterns for large systems.
 
 * [Andy Warfield: Building and Operating a Pretty Big Storage System (My Adventures in Amazon S3), part "Individual workloads are bursty", presentation at FAST'23](https://www.youtube.com/watch?v=sc3J4McebHE&t=1333s)
 * [Marc Brooker: Surprising Scalability of Multitenancy, blog post 2023-03-23](https://brooker.co.za/blog/2023/03/23/economics.html)
 * [Marc Brooker: Surprising Economics of Load-Balanced Systems, blog post 2020-08-06](https://brooker.co.za/blog/2020/08/06/erlang.html)
+* [Marc Brooker: Try again: The tools and techniques behind resilient systems, presentation at AWS re:Invent 2024](https://www.youtube.com/watch?v=rvHd4Y76-fs)
 * [Jack Vanlightly: On the future of cloud services and BYOC, blog post 2023-09-25](https://jack-vanlightly.com/blog/2023/9/25/on-the-future-of-cloud-services-and-byoc)
 * Elhemali\, M\.\, Gallagher\, N\.\, Gordon\, N\.\, Idziorek\, J\.\, Krog\, R\.\, Lazier\, C\.\, Mo\, E\.\, Mritunjai\, A\.\, Perianayagam\, S\.\, Rath\, T\.\, Sivasubramanian\, S\.\, Sorenson III\, J\.C\.\, Sosothikul\, S\.\, Terry\, D\.\, & Vig\, A\. \(2022\)\. __Amazon DynamoDB: A scalable\, predictably performant\, and fully managed NoSQL database service\.__ Retrieved from _https://www.amazon.science/publications/amazon-dynamodb-a-scalable-predictably-performant-and-fully-managed-nosql-database-service_
   * _[Conference presentation on YouTube](https://www.youtube.com/watch?v=9AkgiEJ_dA4)_
@@ -88,6 +89,7 @@ These aren't necessarily directly related to the visualization in this project. 
   * _[Using load shedding to avoid overload](https://aws.amazon.com/builders-library/using-load-shedding-to-avoid-overload/)_
 * [Nelson Elhage: Graceful behavior at capacity, blog post 2023-08-07](https://blog.nelhage.com/post/systems-at-capacity/)
 * [Talat Uyarer & Rishabh Kedia: Crafting an Autoscaler for Apache Beam in a High-Volume Streaming Environment, blog post 2024-02-05](https://beam.apache.org/blog/apache-beam-flink-and-kubernetes-part3/)
+* [Jamie Turner & James Cowling:Five Principles of Good System Design, podcast discussion 2024-11-06](https://youtu.be/RcofAOF0Icc)
 
 ## License
 
