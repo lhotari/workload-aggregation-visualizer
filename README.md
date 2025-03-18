@@ -76,16 +76,18 @@ These aren't necessarily directly related to the visualization in this project. 
 * [Jack Vanlightly: On the future of cloud services and BYOC, blog post 2023-09-25](https://jack-vanlightly.com/blog/2023/9/25/on-the-future-of-cloud-services-and-byoc)
 * Elhemali\, M\.\, Gallagher\, N\.\, Gordon\, N\.\, Idziorek\, J\.\, Krog\, R\.\, Lazier\, C\.\, Mo\, E\.\, Mritunjai\, A\.\, Perianayagam\, S\.\, Rath\, T\.\, Sivasubramanian\, S\.\, Sorenson III\, J\.C\.\, Sosothikul\, S\.\, Terry\, D\.\, & Vig\, A\. \(2022\)\. __Amazon DynamoDB: A scalable\, predictably performant\, and fully managed NoSQL database service\.__ Retrieved from _https://www.amazon.science/publications/amazon-dynamodb-a-scalable-predictably-performant-and-fully-managed-nosql-database-service_
   * _[Conference presentation on YouTube](https://www.youtube.com/watch?v=9AkgiEJ_dA4)_
-* Ed Huang’s blog post series about TiDB's resource control framework
+* Ed Huang’s blog post series related to TiDB
   * _[The Road To Serverless: Intro & Why](https://me.0xffff.me/dbaas1.html)_
   * _[The Road To Serverless: Storage Engine](https://me.0xffff.me/dbaas2.html)_
-  * _[The Road To Serverless: Multi\-tenanc](https://me.0xffff.me/dbaas3.html)_
+  * _[The Road To Serverless: Multi\-tenancy](https://me.0xffff.me/dbaas3.html)_
 * Jack Vanlightly’s blog post series
   * _[The Architecture of Serverless Data Systems](https://jack-vanlightly.com/blog/2023/11/14/the-architecture-of-serverless-data-systems)_
 * Povzner\, A\.\, Mahajan\, P\.\, Gustafson\, J\.\, Rao\, J\.\, Juma\, I\.\, Min\, F\.\, Sridharan\, S\.\, Bhatia\, N\.\, Attaluri\, G\.\, Chandra\, A\.\, Kozlovski\, S\.\, Sivaram\, R\.\, Bradstreet\, L\.\, Barrett\, B\.\, Shah\, D\.\, Jacot\, D\.\, Arthur\, D\.\, Dagostino\, R\.\, McCabe\, C\.\, Obili\, M\. R\.\, Prakasam\, K\.\, Sancio\, J\. G\.\, Singh\, V\.\, Nikhil\, A\.\, & Gupta\, K\. \(2023\)\.  __Kora: A Cloud\-Native Event Streaming Platform for Kafka\.__  Proceedings of the VLDB Endowment\, 16\(12\)\, 3822\-3834\.  _https://doi.org/10.14778/3611540.3611567_
 * AWS blog posts by David Yanacek
   * _[Fairness in multi\-tenant systems](https://aws.amazon.com/builders-library/fairness-in-multi-tenant-systems/)_
   * _[Using load shedding to avoid overload](https://aws.amazon.com/builders-library/using-load-shedding-to-avoid-overload/)_
+* [Nelson Elhage: Graceful behavior at capacity, blog post 2023-08-07](https://blog.nelhage.com/post/systems-at-capacity/)
+* [Talat Uyarer & Rishabh Kedia: Crafting an Autoscaler for Apache Beam in a High-Volume Streaming Environment, blog post 2024-02-05](https://beam.apache.org/blog/apache-beam-flink-and-kubernetes-part3/)
 
 ## License
 
