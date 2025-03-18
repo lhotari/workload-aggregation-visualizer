@@ -4,14 +4,14 @@
 
 This simulation and visualization is inspired by Andrew Warfield's talk at FAST '23: ["Building and Operating a Pretty Big Storage System (My Adventures in Amazon S3)"](https://www.youtube.com/watch?v=sc3J4McebHE&t=1333s).
 
-This simulation was created to provide visualization of workload aggregation for a guest lecture in the Aalto University course "Networking at Scale and Advanced Applications" on March 18, 2025, covering [Autoscaling challenges of multitenant SaaS platforms](presentation/Autoscaling%20challenges%20of%20multitenant%20SaaS%20platforms.pdf). You can find the slides [here](presentation/Autoscaling%20challenges%20of%20multitenant%20SaaS%20platforms.pdf).
+This simulation was created to provide visualization of workload aggregation for a guest lecture in the Aalto University course "Networking at Scale and Advanced Applications" on March 18, 2025, covering [Autoscaling challenges of multitenant SaaS platforms](https://lhotari.github.io/workload-aggregation-visualizer/presentation/Autoscaling%20challenges%20of%20multitenant%20SaaS%20platforms.pdf). You can find the slides [here](https://lhotari.github.io/workload-aggregation-visualizer/presentation/Autoscaling%20challenges%20of%20multitenant%20SaaS%20platforms.pdf).
 
 * Multi-tenancy significantly reduces the peak-to-average ratio of overall system load
   * In general, systems must provision for peak demand, not average load to meet performance quality requirements
   * Lower peak-to-average ratios directly translate to fewer overprovisioned resources
   * This results in improved resource utilization and cost efficiency
 
-Please note that this script contains many assumptions about the simulated workloads and doesn't necessarily match reality. The goal is to visualize the effects of workload aggregation on system load. The [presentation](presentation/Autoscaling%20challenges%20of%20multitenant%20SaaS%20platforms.pdf) contains more details about cases where workloads are correlated and don't follow the model used in this simulation.
+Please note that this script contains many assumptions about the simulated workloads and doesn't necessarily match reality. The goal is to visualize the effects of workload aggregation on system load. The [presentation](https://lhotari.github.io/workload-aggregation-visualizer/presentation/Autoscaling%20challenges%20of%20multitenant%20SaaS%20platforms.pdf) contains more details about cases where workloads are correlated and don't follow the model used in this simulation.
 
 ## Features of the simulation
 
@@ -64,11 +64,11 @@ _(Some images are omitted to simplify the example.)_
 
 ## Presentation that includes this visualization
 
-* Guest lecture for Aalto University course “Networking at Scale and Advanced Applications” on March 18, 2025 about [Autoscaling challenges of multitenant SaaS platforms](presentation/Autoscaling%20challenges%20of%20multitenant%20SaaS%20platforms.pdf) by Lari Hotari
+* Guest lecture for Aalto University course “Networking at Scale and Advanced Applications” on March 18, 2025 about [Autoscaling challenges of multitenant SaaS platforms](https://lhotari.github.io/workload-aggregation-visualizer/presentation/Autoscaling%20challenges%20of%20multitenant%20SaaS%20platforms.pdf) by Lari Hotari
 
 ## Resources related to multi-tenant SaaS and economics of scale in cloud services
 
-These aren't necessarily directly related to the visualization in this project. These resources were the inspiration to create this visualization as well as some of the resources for the [related presentation](presentation/Autoscaling%20challenges%20of%20multitenant%20SaaS%20platforms.pdf).
+These aren't necessarily directly related to the visualization in this project. These resources were the inspiration to create this visualization as well as some of the resources for the [related presentation](https://lhotari.github.io/workload-aggregation-visualizer/presentation/Autoscaling%20challenges%20of%20multitenant%20SaaS%20platforms.pdf).
 
 * [Andy Warfield: Building and Operating a Pretty Big Storage System (My Adventures in Amazon S3), part "Individual workloads are bursty", presentation at FAST'23](https://www.youtube.com/watch?v=sc3J4McebHE&t=1333s)
 * [Marc Brooker: Surprising Scalability of Multitenancy, blog post 2023-03-23](https://brooker.co.za/blog/2023/03/23/economics.html)
